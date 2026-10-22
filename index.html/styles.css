@@ -1,0 +1,88 @@
+/* Custom styles and enhancements for EasyVoyage Travel Planner */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;750;800&display=swap');
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.dark .glass-panel {
+  background: rgba(30, 41, 59, 0.85);
+}
+
+/* Map custom styles */
+#travel-map {
+  width: 100%;
+  height: 380px;
+  border-radius: 1rem;
+  z-index: 10;
+}
+
+.custom-map-pin {
+  background: transparent;
+  border: none;
+}
+
+.distance-pill {
+  background: transparent;
+  border: none;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #475569;
+}
+
+/* Subtle animation pulses */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+.animate-float {
+  animation: floatSlow 4s ease-in-out infinite;
+}
+
+/* Print stylesheet for printable itinerary */
+@media print {
+  header, #search-form, #featured-routes-chips, .filter-tab-btn, #booking-modal, footer, #toast, .no-print {
+    display: none !important;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+    padding: 0 !important;
+  }
+
+  #results-section {
+    display: block !important;
+  }
+
+  .shadow-xl, .shadow-lg, .shadow-md {
+    box-shadow: none !important;
+    border: 1px solid #ddd !important;
+  }
+}

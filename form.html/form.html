@@ -1,0 +1,88 @@
+<DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>style form example</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <h1>Registeration Form </h1>
+        <form action="">
+            <div><label for="name">Full name</label>
+                <input type="text" id="name" name="name" placeholder="enter your name" required>
+                               </div>
+                                     </tr>
+      <tr>
+        <td>Date of Birth:</td>
+        <td>
+          <select name="day">
+            <option value="">Day</option>
+            <script>
+              for (let i = 1; i <= 31; i++) {
+                document.write("<option>" + i + "</option>");
+              }
+            </script>
+          </select>
+          <select name="month">
+            <option value="">Month</option>
+            <option>Jan</option><option>Feb</option><option>Mar</option>
+            <option>Apr</option><option>May</option><option>Jun</option>
+            <option>Jul</option><option>Aug</option><option>Sep</option>
+            <option>Oct</option><option>Nov</option><option>Dec</option>
+          </select>
+          <select name="year">
+            <option value="">Year</option>
+            <script>
+              for (let y = 1980; y <= 2025; y++) {
+                document.write("<option>" + y + "</option>");
+              }
+            </script>
+          </select>
+            <div><label for="email">Email</label>
+                <input type="text" id="email" name="name" placeholder="enter you email" required>
+            </div>
+            <div> <label for="passward">Passward</label>
+                <input type="text" id="passward" name="name" placeholder="enter passward" required>
+            </div>
+
+            <label for="">Gender</label>
+            <div class="radio-group">
+                <label><input type="radio" name="gender" value="male">male</label>
+                <label><input type="radio" name="gender" value="female">female</label>
+                <label><input type="radio" name="gender" value="other">other</label>
+            </div>
+            <label for="">Skill</label>
+            <div class="checkbox-group">
+                <label for=""><input type="checkbox" name="skill" value="css">CSS</label>
+                <label for=""><input type="checkbox" name="skill" value="css">HTML</label>
+                <label for=""><input type="checkbox" name="skill" value="css">JS</label>
+            </div>
+            <div>
+                <label for="country">Country</label>
+                <select name="country" id="country">
+                    <option value="select">select</option>
+                    <option value="india">india</option>
+                    <option value="usa">usa</option>
+                    <option value="finland">finland</option>
+                    <option value="UK">UK</option>
+                </select>
+                <label for="message">Message</label>
+                <div>
+                    <textarea name="message" id="message" rows="4">enter the descripton</textarea>
+                </div>
+                <div>
+                    <button type="submit">Submit</button>
+                </div>
+            </div>
+
+
+        </form>
+
+    </div>
+</body>
+
+</html
